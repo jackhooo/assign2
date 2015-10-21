@@ -94,15 +94,15 @@ void draw() {
   image(p1, g , 0);
   
   if(c==0){eey=ey;c++;}
-  if((fx<=ex+61&&fx>=ex&&fy<=ey+61&&fy>=ey)||(ex<=fx+51&&ex>=fx&&ey<=fy+51&&ey>=fy))
+  if((fx+30<=ex+61&&fx+30>=ex&&fy+30<=ey+61&&fy+30>=ey)||(ex+25<=fx+51&&ex+25>=fx&&ey+25<=fy+51&&ey+25>=fy))
   {ex=0;image(e,ex,y);ey=y;blood-=40;xx=fx;yy=fy;eey=ey;if(blood<=0){blood=40;game=3;}}
   else{image(e,ex,ey);}
-  ex+=xx/100;
-  ey+=(yy-eey)/100;
+  ex+=xx/50;
+  ey+=(yy-eey)/50;
   if(ex>=640||ey>=480||ey<=0){ex=0;image(e,ex,y);ey=y;xx=fx;yy=fy;eey=ey;}
   else{image(e,ex,ey);}
   
-  if((fx<=tx+38&&fx>=tx+3&&fy<=ty+38&&fy>=ty+3)||(tx<=fx+48&&tx>=fx+3&&ty<=fy+48&&ty>=fy+3))
+  if((fx+25<=tx+38&&fx+25>=tx+3&&fy+25<=ty+38&&fy+25>=ty+3)||(tx+20<=fx+48&&tx+20>=fx+3&&ty+20<=fy+48&&ty+20>=fy+3))
   {image(t,q,w);tx=q;ty=w;if(blood<200){blood+=20;}}
   else{image(t,tx,ty);}
   
@@ -159,4 +159,3 @@ if(key==CODED){
      }
   }
 }
- 
