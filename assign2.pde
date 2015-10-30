@@ -102,8 +102,7 @@ void draw() {
   if(ex>=640||ey>=480||ey<=0){ex=0;image(e,ex,y);ey=y;xx=fx;yy=fy;eey=ey;}
   else{image(e,ex,ey);}
   
-  //if((fx+25<=tx+38&&fx+25>=tx+3&&fy+25<=ty+38&&fy+25>=ty+3)||(tx+20<=fx+48&&tx+20>=fx+3&&ty+20<=fy+48&&ty+20>=fy+3))
-  if((fx+25>=tx||fx+25<=tx+41)&&(fy+25>=ty||fy+25<=ty+41))
+  if((fx+25<=tx+38&&fx+25>=tx+3&&fy+25<=ty+38&&fy+25>=ty+3)||(tx+20<=fx+48&&tx+20>=fx+3&&ty+20<=fy+48&&ty+20>=fy+3))
   {image(t,q,w);tx=q;ty=w;if(blood<200){blood+=20;}}
   else{image(t,tx,ty);}
   
